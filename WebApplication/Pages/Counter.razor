@@ -1,0 +1,31 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+<p>Strengen er: @navn</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-danger" @onclick="test">Trykk på meg!</button>
+<button class="btn btn-success" @onclick="nullstill">Nullstill</button>
+
+@code {
+    private int currentCount = 0;
+    private string navn = "Nikola";
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void test()
+    {
+        navn += "Hallo";
+    }
+
+    private void nullstill()
+    {
+        navn = "";
+    }
+
+}
